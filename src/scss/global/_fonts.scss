@@ -1,5 +1,8 @@
 
 //------------------------OpenSans-------------------------
 
-// font
-@include font-face('','', '', '', 400, normal);
+// font Regular
+@include font-face('PT Sans', 'PTSans', 'PT Sans', 'PTSans-Regular', 400, normal);
+
+// font Bold
+@include font-face('PT Sans', 'PTSans-Bold', 'PT Sans Bold', 'PTSans-Bold', 700, normal);

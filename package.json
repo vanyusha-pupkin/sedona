@@ -5,19 +5,16 @@
   "main": "gulpfile.js",
   "author": "Pivovarov Anton",
   "license": "ISC",
-
   "repository": {
     "type": "git",
     "url": "git@github.com:vanyusha-pupkin/sedona.git"
   },
-
   "scripts": {
     "start": "gulp watchFiles --dev",
     "build": "gulp build",
     "testhtml": "gulp validateHtml",
     "deploy": "npm run build && gulp deploy"
   },
-
   "devDependencies": {
     "autoprefixer": "^9.7.6",
     "browser-sync": "^2.26.7",
@@ -50,13 +47,10 @@
     "gulp-w3c-html-validator": "^2.0.1",
     "gulp-webp": "^4.0.1"
   },
-
   "browserslist": [
     "last 2 versions",
     "IE 11",
     "Firefox ESR"
   ],
-
   "dependencies": {}
-
 }
