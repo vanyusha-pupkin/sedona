@@ -1,0 +1,30 @@
+
+@mixin list-reset () {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin font-face ($family, $src, $local-name-1, $local-name-2, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src:  local($local-name-1),
+          local($local-name-2),
+          url('#{$folder-fonts + $src}.woff2') format('woff2'),
+          url('#{$folder-fonts + $src}.woff') format('woff');
+  }
+}
+
+@mixin background-image-webp($file, $extension) {
+  .no-webp & {
+    background-image: url($file +"."+ $extension);
+  }
+
+  .webp & {
+    background-image: url($file + ".webp");
+  }
+}

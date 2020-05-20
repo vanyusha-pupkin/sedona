@@ -1,0 +1,16 @@
+.container {
+  // width: $mobile-width;
+  // margin: 0 auto;
+  width: auto;
+
+  @media ($bp-tablet) {
+    // width: $tablet-width;
+    // margin: 0 auto;
+    width: auto;
+  }
+
+  @media ($bp-desktop) {
+    width: $width-desktop;
+    margin: 0 auto;
+  }
+}

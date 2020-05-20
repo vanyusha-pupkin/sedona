@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <!-------------------- head -------------------->
+
+@@include('html/_head.html', {
+  'title': ''
+})
+
+  <body class="page">
+
+    <!----------------- svg-sprite ----------------->
+    <div class="visually-hidden">
+      @@include('img/svg-sprite/sprite.svg')
+    </div>
+
+    <!------------------- header ------------------->
+
+@@include('html/_header.html', {
+  '': '',
+  '': ''
+})
+
+  <!-- 'link-logo': 'href="index.html"' -->
+
+    <!------------------- content ------------------>
+
+    <main class="page-main">
+
+      <h1 class="visually-hidden"></h1>
+
+
+    </main>
+
+
+    <!------------------- footer ------------------->
+@@include('html/_footer.html', {'': ''})
+
+
+    <!---------------- modal-windows --------------->
+
+
+    <!------------- script-connection -------------->
+    <script src="js/main.min.js"></script>
+
+
+  </body>
+</html>
