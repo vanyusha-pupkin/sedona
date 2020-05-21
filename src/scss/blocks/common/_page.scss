@@ -1,14 +1,35 @@
 .page {
-  // min-width: $width-mobile;
+  min-width: $width-mobile;
 
-  // font-family: $font-family-base;
-  // font-size: $font-size-base;
-  // line-height: $line-height-base;
-  // font-weight: $font-weight-base;
-  // font-style: normal;
-  // color: $font-color-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-base;
+  font-style: normal;
+  color: $font-color-base;
 
-  // background-color: $bg-color-body;
+  background-color: $bg-color-body;
 
   // overflow-x: hidden;
 }
+
+.page__container {
+  width: $width-mobile;
+  margin: 0 auto;
+  // width: auto;
+
+  background-color: $bg-color-page;
+  box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
+
+  @media ($bp-tablet) {
+    width: $width-tablet;
+    margin: 0 auto;
+    // width: auto;
+  }
+
+  @media ($bp-desktop) {
+    width: $width-desktop;
+    margin: 0 auto;
+  }
+}
+

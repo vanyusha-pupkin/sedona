@@ -4,18 +4,18 @@ $folder-images: '../img/';         // путь к изображениям
 $folder-fonts:  '../fonts/';       // путь к шрифтам
 
 //SIZE
-// $width-mobile: 0px;
-// $width-tablet: 0px;
-// $width-desktop: 0px;
-// $width-only-mobile-tablet: $width-desktop - 1px;
+$width-mobile: 320px;
+$width-tablet: 768px;
+$width-desktop: 1200px;
+$width-only-mobile: $width-tablet - 1px;
 
 //PADDING
-// $padding-mobile: 20px;
-// $padding-tablet: 20px;
+$padding-mobile: 20px;
+$padding-tablet: 60px;
 
 //BREAK POINT
-// $bp-tablet: "min-width: #{$width-tablet}";            //break point for tablet version
-// $bp-desktop: "min-width: #{$width-desktop}";   //break point for desktop version
+$bp-tablet: "min-width: #{$width-tablet}";            //break point for tablet version
+$bp-desktop: "min-width: #{$width-desktop}";   //break point for desktop version
 
 //RETINA
 $retina-dpi: "min-resolution: 144dpi";
@@ -24,18 +24,25 @@ $retina-dppx: "min-resolution: 1.5dppx";
 //COLOR
 $color-black: #000000;
 $color-white: #ffffff;
-
-
+$color-blue: #81b3d2;
+$color-blue--hover: #669ec0;
+$color-blue--active: #5496bd;
+$color-gray: #f2f2f2;
+$color-gray--hover: #e5e5e5;
+$color-gray--active: #d5d5d5;
 
 //FONT
-// $font-family-base: "", "Arial", sans-serif;
-// $font-size-base: px;
-// $line-height-base: px;
-// $font-weight-base: 400;
-// $font-color-base: $font-color-dark;
+$font-family-base: "PT Sans", "Arial", sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.5;
+$font-weight-base: 400;
+$font-color-base: #333333;
 
 //BACKGROUND
-// $bg-color-body: ;
+$bg-color-body: $color-gray;
+$bg-color-page: $color-white;
+$bg-color-blue: $color-blue;
+$bg-color-gray: $color-gray;
 
 
 //TRANSITION
@@ -45,15 +52,9 @@ $color-white: #ffffff;
 // $bd-color-base: ;
 
 //FORM
-// $bd-color-form-item: ;
-// $bd-color-form-item--hover: ;
-// $bd-color-form-item--active: ;
-// $bd-color-form-item--focus: ;
-// $bd-width-form-item: px;
+// $bg-color-form-icon: #e6e6e6;
 
-// $bg-color-form-icon: ;
-
-// $font-color-form-item: ;
+// $font-color-form-item: $color-black;
 
 // $timing-function-form: 0.0s;
 
@@ -63,7 +64,6 @@ $color-white: #ffffff;
 // $font-color-legend: ;
 
 //lebel
-// $font-color-label--input-text: ;
 
 //input-text
 
@@ -74,6 +74,10 @@ $color-white: #ffffff;
 //checkbox
 
 //BUTTON
+$button-bg-color: $color-blue;
+$button-bg-color--hover: $color-blue--hover;
+$button-bg-color--active: $color-blue--active;
+$button-bg-color--disabled: #e5e5e5;
 
 //TABLE
 
