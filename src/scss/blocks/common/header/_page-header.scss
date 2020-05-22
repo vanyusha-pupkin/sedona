@@ -1,0 +1,43 @@
+.page-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &--nojs {}
+}
+
+.page-header__wrapper {}
+
+.page-header__logo {
+  order: 1;
+
+  display: block;
+  height: 56px;
+  margin: 0 auto;
+
+  @media ($bp-tablet) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+
+    order: 0;
+
+    transform: translateX(-50%);
+
+    @media ($bp-desktop) {
+
+      img {
+        width: 188px;
+        height: 96px;
+      }
+    }
+  }
+}
+
+.page-header__nav {
+  @media ($bp-tablet) {
+    position: relative;
+  }
+}

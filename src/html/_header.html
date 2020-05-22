@@ -1,36 +1,38 @@
 
-    <header class="page__header page-header page-header--nojs">
+    <header class="page-header">
 
-            <div class="page-header__wrapper">
+      <a @@link-logo-index class="page-header__logo">
+        <span class="visually-hidden">City of Sedona - Главная</span>
 
-              <a @@link-logo-index class="page-header__logo">
-                <span class="visually-hidden">Логотип </span>
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип City of Sedona">
+        </picture>
 
-              </a>
+      </a>
 
-              <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
 
-                <button class="main-nav__toggle" type="button">
-                  <span class="visually-hidden">Открыть меню</span>
-                </button>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
-                <ul class="main-nav__list">
-                  <li class="main-nav__item  @@active-index">
-                    <a @@link-index></a>
-                  </li>
-                  <li class="main-nav__item @@active-photo">
-                    <a @@link-photo></a>
-                  </li>
-                  <li class="main-nav__item @@active-form">
-                    <a @@link-form></a>
-                  </li>
-                  <li class="main-nav__item">
-                    <a href="#" target="_blank"></a>
-                  </li>
-                </ul>
+        <ul class="main-nav__list">
+          <li class="main-nav__item  @@active-index">
+            <a @@link-index>Главная</a>
+          </li>
+          <li class="main-nav__item @@active-photo">
+            <a @@link-photo>Фото и видео</a>
+          </li>
+          <li class="main-nav__item @@active-form">
+            <a @@link-form>Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" target="_blank">HTML academy</a>
+          </li>
+        </ul>
 
-              </nav>
-
-            </div> <!-- page-header__wrapper -->
+      </nav>
 
     </header>
