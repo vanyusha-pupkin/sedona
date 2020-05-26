@@ -1,0 +1,117 @@
+.advantage {
+  position: relative;
+
+  background-color: $bg-color-gray;
+
+  &--town,
+  &--devil-bridge {
+
+    color: $color-white;
+
+    background-color: $bg-color-blue;
+
+    .advantage::after {
+      display: none;
+    }
+  }
+
+  &--town {
+    padding-top: 20px;
+
+    .advantage__image {
+
+      @include background-image-webp("../img/index/photo-city@1x", "jpg");
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: cover;
+
+      @media ($retina-dpi), ($retina-dppx) {
+        @include background-image-webp("../img/index/photo-city@2x", "jpg");
+      }
+    }
+
+  }
+
+  &--devil-bridge {
+
+    .advantage__image {
+
+      @include background-image-webp("../img/index/photo-bridge@1x", "jpg");
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: cover;
+
+      @media ($retina-dpi), ($retina-dppx) {
+        @include background-image-webp("../img/index/photo-bridge@2x", "jpg");
+      }
+    }
+
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: $padding-mobile;
+    right: $padding-mobile;
+
+    height: 1px;
+
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.advantage__wrapper {}
+
+.advantage__inner {
+  padding: 0 $padding-mobile;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.advantage__image {
+  height: 260px;
+
+  @include background-image-webp("../img/index/photo-city@1x", "jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  // background-size: auto 260px;
+  background-size: cover;
+
+  @media ($retina-dpi), ($retina-dppx) {
+    @include background-image-webp("../img/index/photo-city@2x", "jpg");
+  }
+}
+
+.advantage__title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 20px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+
+  br {
+    display: none;
+  }
+}
+
+.advantage__number {
+  margin: 0;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.advantage__text {
+  margin: 0;
+}

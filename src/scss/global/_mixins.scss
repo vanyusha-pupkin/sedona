@@ -104,3 +104,58 @@
 
   @return $result;
 }
+
+
+//MIXIN two-triangles
+@mixin two-triangles ($bg-color-modile, $bg-color-tablet, $bg-color-desktop, $height-modile, $height-tablet, $height-desktop) {
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: ($height-modile * -1);
+    z-index: 2;
+
+    width: 0;
+    height: 0;
+
+    border-top: $height-modile solid $bg-color-modile;
+  }
+
+  &::before {
+    left: 0;
+    border-left: 50vw solid transparent;
+  }
+
+  &::after {
+    right: 0;
+    border-right: 50vw solid transparent;
+  }
+
+  @media (max-width: $width-mobile) {
+    &::before {
+      border-left: $width-mobile / 2 solid transparent;
+    }
+
+    &::after {
+      border-right: $width-mobile / 2 solid transparent;
+    }
+  }
+
+  @media ($bp-tablet) {
+    &::before,
+    &::after {
+      bottom: ($height-tablet * -1);
+      border-top: $height-tablet solid $bg-color-tablet;
+    }
+  }
+
+  @media ($bp-desktop) {
+    &::before,
+    &::after {
+      bottom: ($height-desktop * -1);
+      border-top: $height-desktop solid $bg-color-desktop;
+    }
+  }
+}

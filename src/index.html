@@ -13,7 +13,7 @@
 
     <!----------------- svg-sprite ----------------->
     <div class="visually-hidden">
-<!--       @@include('img/svg-sprite/sprite.svg') -->
+      @@include('img/svg-sprite/sprite.svg')
     </div>
 
     <!------------------- header ------------------->
@@ -37,9 +37,95 @@
 
     <main class="page-main">
 
-      <h1 class="visually-hidden"></h1>
+      <h1 class="visually-hidden">Город Сидона</h1>
 
+      <section class="intro">
+        <h2 class="visually-hidden">Добро пожаловать в город Сидона</h2>
+        <svg class="intro__image intro__image--index" width="282" height="214">
+          <use xlink:href="#text-sedona-index"></use>
+        </svg>
+        <svg class="intro__image intro__image--inner" width="0" hight="0">
+          <use xlink:href="#text-sedona"></use>
+        </svg>
+      </section>
 
+      <section class="advantages">
+        <h2 class="visually-hidden">Чем примечателен город Седона</h2>
+        <p class="advantages__promo">СЕДОНА — небольшой городок&nbsp;в&nbsp;АРИЗОНЕ, <br> заслуживающий большего!</p>
+        <p class="advantages__intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+
+        <ol class="advantages__list">
+
+          <li class="advantages__item advantages__item--with-photo advantage advantage--town">
+            <div class="advantage__wrapper">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">НАСТОЯЩИЙ<br>ГОРОДОК</h3>
+                <p class="advantage__number">— №1 —</p>
+                <p class="advantage__text">СЕДОНА НЕ АТтРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ&nbsp;ТЕЧЕТ&nbsp;СВОЯ ЖИЗНЬ</p>
+              </div> <!-- advantage__inner -->
+              <div class="advantage__image"></div>
+            </div> <!-- advantage__wrapper -->
+
+            <ul class="advantages__sublist">
+              <li class="advantages__feature feature feature--housing">
+                <h4 class="feature__title">Жилье</h4>
+                <p class="feature__text">Рекомендуем пожить в настоящем&nbsp;мотеле, все как в кино!</p>
+              </li>
+              <li class="advantages__feature feature feature--food">
+                <h4 class="feature__title">ЕДА</h4>
+                <p class="feature__text">Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+              </li>
+              <li class="advantages__feature feature feature--souvenir">
+                <h4 class="feature__title">СУВЕНИРЫ</h4>
+                <p class="feature__text">Не только китайского, но и местного  производства!</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="advantages__item advantages__item--with-photo advantage advantage--devil-bridge">
+            <div class="advantage__wrapper">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">ТАМ ЕСТЬ<br>Мост дьявола</h3>
+                <p class="advantage__number">— №2 —</p>
+                <p class="advantage__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              </div> <!-- advantage__inner -->
+              <div class="advantage__image"></div>
+            </div> <!-- advantage__wrapper -->
+          </li>
+
+          <li class="advantages__item advantage">
+            <div class="advantage__wrapper">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">НЕБОЛЬШАЯ<br>ПЛОЩАДЬ</h3>
+                <p class="advantage__number">— №3 —</p>
+                <p class="advantage__text">ВСЕ интересные места находятся очень близко</p>
+              </div> <!-- advantage__inner -->
+            </div> <!-- advantage__wrapper -->
+          </li>
+
+          <li class="advantages__item advantage">
+            <div class="advantage__wrapper">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">КРАСИВАЯ<br>ДОРОГА</h3>
+                <p class="advantage__number">— №4 —</p>
+                <p class="advantage__text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем&nbsp;НЕ&nbsp;СКУЧНО!</p>
+              </div> <!-- advantage__inner -->
+            </div> <!-- advantage__wrapper -->
+          </li>
+
+          <li class="advantages__item advantage">
+            <div class="advantage__wrapper">
+              <div class="advantage__inner">
+                <h3 class="advantage__title">МАЛО<br>ТУРИСТОВ</h3>
+                <p class="advantage__number">— №5 —</p>
+                <p class="advantage__text">Большинство едет в гранд каньон и&nbsp;толпится там</p>
+              </div> <!-- advantage__inner -->
+            </div> <!-- advantage__wrapper -->
+          </li>
+
+        </ol>
+
+      </section>
 
     </main>
 

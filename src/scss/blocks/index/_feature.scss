@@ -1,0 +1,76 @@
+.feature {
+  position: relative;
+
+  padding-top: 40px;
+  padding-left: 50px;
+
+  text-align: left;
+  color: $font-color-base;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+
+
+    background-repeat: no-repeat;
+    background-position:  0 0;
+    background-size: cover;
+  }
+
+  &--food {
+    &::before {
+      top: 35px;
+
+      width: 40px;
+      height: 38px;
+
+      background-image: sassvg("icon-burger", $color-blue);
+    }
+  }
+
+  &--souvenir {
+    &::before {
+      top: 30px;
+      left: 5px;
+
+      width: 32px;
+      height: 38px;
+
+      background-image: sassvg("icon-gift", $color-blue);
+    }
+  }
+
+  &--housing {
+    &::before {
+      top: 30px;
+
+      width: 39px;
+      height: 38px;
+
+      background-image: sassvg("icon-house", $color-blue);
+    }
+  }
+}
+
+.feature__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+.feature__text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 21px;
+}

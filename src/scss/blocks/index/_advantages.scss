@@ -1,0 +1,49 @@
+.advantages {
+  padding-top: 47px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages__promo {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0 20px;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $color-black;
+}
+
+.advantages__intro {
+  position: relative;
+
+  margin: 0;
+  padding: 0 20px;
+  padding-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 26px;
+
+  @include two-triangles ($color-white, $color-white, $color-white, 18px, 0, 0)
+}
+
+.advantages__list {
+  @include list-reset ();
+}
+
+.advantages__item {
+
+  &--with-photo {}
+}
+
+.advantages__sublist {
+  @include list-reset ();
+
+  padding: 0 20px;
+
+  background-color: $bg-color-page;
+}
+
+.advantages__feature {}
