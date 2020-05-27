@@ -1,1 +1,30 @@
-.button {}
+.button {
+  display: inline-block;
+
+  padding: 16px 10px;
+
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-white;
+
+  background-color: $bg-color-blue;
+
+  cursor: pointer;
+  transition: all $timing-function;
+
+  &:hover {
+    background-color: $button-bg-color--hover;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: $button-bg-color--active;
+  }
+
+  &--disabled {
+    background-color: $button-bg-color--disabled;
+  }
+}
