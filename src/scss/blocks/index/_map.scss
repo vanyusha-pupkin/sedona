@@ -1,0 +1,13 @@
+.map {
+  min-height: 350px;
+
+  background-color: #f3f1ed;
+  @include background-image-webp("../img/index/bg-map@1x", "jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+
+  @media ($retina-dpi), ($retina-dppx) {
+    @include background-image-webp("../img/index/bg-map@2x", "jpg");
+    background-size: cover;
+  }
+}
