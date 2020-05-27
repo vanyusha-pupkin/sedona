@@ -17,7 +17,6 @@
     position: absolute;
     left: 0;
 
-
     background-repeat: no-repeat;
     background-position:  0 0;
     background-size: cover;
@@ -55,6 +54,53 @@
 
       background-image: sassvg("icon-house", $color-blue);
     }
+  }
+
+  @media ($bp-tablet) {
+    width: 33.33%;
+
+    padding: 0 50px;
+    padding-top: 160px;
+    padding-bottom: 60px;
+
+    text-align: center;
+
+  &--food {
+    &::before {
+      top: 63px;
+      left: 50%;
+
+      width: 77px;
+      height: 70px;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  &--souvenir {
+    &::before {
+      top: 57px;
+      left: 50%;
+
+      width: 64px;
+      height: 76px;
+
+      transform: translateX(-50%);
+    }
+  }
+
+  &--housing {
+    &::before {
+      top: 60px;
+      left: 50%;
+
+      width: 75px;
+      height: 73px;
+
+      transform: translateX(-50%);
+    }
+  }
+
   }
 }
 

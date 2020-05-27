@@ -3,51 +3,6 @@
 
   background-color: $bg-color-gray;
 
-  &--town,
-  &--devil-bridge {
-
-    color: $color-white;
-
-    background-color: $bg-color-blue;
-
-    .advantage::after {
-      display: none;
-    }
-  }
-
-  &--town {
-    padding-top: 20px;
-
-    .advantage__image {
-
-      @include background-image-webp("../img/index/photo-city@1x", "jpg");
-      background-repeat: no-repeat;
-      background-position: center 0;
-      background-size: cover;
-
-      @media ($retina-dpi), ($retina-dppx) {
-        @include background-image-webp("../img/index/photo-city@2x", "jpg");
-      }
-    }
-
-  }
-
-  &--devil-bridge {
-
-    .advantage__image {
-
-      @include background-image-webp("../img/index/photo-bridge@1x", "jpg");
-      background-repeat: no-repeat;
-      background-position: center 0;
-      background-size: cover;
-
-      @media ($retina-dpi), ($retina-dppx) {
-        @include background-image-webp("../img/index/photo-bridge@2x", "jpg");
-      }
-    }
-
-  }
-
   &::after {
     content: "";
 
@@ -66,6 +21,75 @@
       display: none;
     }
   }
+
+  &--town,
+  &--devil-bridge {
+
+    color: $color-white;
+
+    .advantage::after {
+      display: none;
+    }
+
+    .advantage__inner {
+      background-color: $bg-color-blue;
+    }
+
+  }
+
+  &--town {
+
+    .advantage__inner {
+      padding-top: 50px;
+    }
+
+    .advantage__image {
+      @include background-image-webp("../img/index/photo-city@1x", "jpg");
+
+      @media ($retina-dpi), ($retina-dppx) {
+        @include background-image-webp("../img/index/photo-city@2x", "jpg");
+      }
+    }
+  }
+
+  &--devil-bridge {
+
+    .advantage__image {
+      @include background-image-webp("../img/index/photo-bridge@1x", "jpg");
+
+      @media ($retina-dpi), ($retina-dppx) {
+        @include background-image-webp("../img/index/photo-bridge@2x", "jpg");
+      }
+    }
+  }
+
+  @media ($bp-tablet) {
+    width: 33.33%;
+
+    &::after {
+      display: none;
+    }
+
+    &--town,
+    &--devil-bridge {
+      width: 100%;
+      padding-top: 0;
+
+      .advantage__wrapper {
+        display: flex;
+      }
+
+      .advantage__inner {
+        width: 33.33%;
+      }
+    }
+
+    &--devil-bridge  {
+      .advantage__inner {
+        order: 2;
+      }
+    }
+  }
 }
 
 .advantage__wrapper {}
@@ -74,26 +98,31 @@
   padding: 0 $padding-mobile;
   padding-top: 30px;
   padding-bottom: 40px;
+
+  @media ($bp-tablet) {
+    padding-top: 50px;
+    padding-right: 45px;
+    padding-left: 45px;
+    padding-bottom: 50px;
+  }
 }
 
 .advantage__image {
-  height: 260px;
+  min-height: 260px;
 
-  @include background-image-webp("../img/index/photo-city@1x", "jpg");
   background-repeat: no-repeat;
   background-position: center 0;
-  // background-size: auto 260px;
   background-size: cover;
 
-  @media ($retina-dpi), ($retina-dppx) {
-    @include background-image-webp("../img/index/photo-city@2x", "jpg");
+  @media ($bp-tablet) {
+    width: 66.66%;
+    height: auto;
   }
 }
 
 .advantage__title {
   margin: 0;
   margin-bottom: 10px;
-  padding: 0 20px;
 
   font-size: 18px;
   line-height: 26px;
@@ -101,6 +130,12 @@
 
   br {
     display: none;
+  }
+
+  @media ($bp-tablet) {
+    br {
+      display: block;
+    }
   }
 }
 
