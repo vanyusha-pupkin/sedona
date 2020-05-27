@@ -1,15 +1,11 @@
 .feature {
   position: relative;
 
-  padding-top: 40px;
+  padding-top: 28px;
   padding-left: 50px;
 
   text-align: left;
   color: $font-color-base;
-
-  &:last-child {
-    padding-bottom: 40px;
-  }
 
   &::before {
     content: "";
@@ -23,19 +19,25 @@
   }
 
   &--food {
+    order: 1;
     &::before {
-      top: 35px;
+      top: 23px;
+      left: -3px;
 
       width: 40px;
       height: 38px;
 
       background-image: sassvg("icon-burger", $color-blue);
     }
+
+    @media ($bp-tablet) {
+      order: 0;
+    }
   }
 
   &--souvenir {
     &::before {
-      top: 30px;
+      top: 18px;
       left: 5px;
 
       width: 32px;
@@ -47,7 +49,7 @@
 
   &--housing {
     &::before {
-      top: 30px;
+      top: 20px;
 
       width: 39px;
       height: 38px;
@@ -58,10 +60,11 @@
 
   @media ($bp-tablet) {
     width: 33.33%;
+    min-height: 330px;
 
-    padding: 0 50px;
+    padding: 0 45px;
     padding-top: 160px;
-    padding-bottom: 60px;
+    padding-bottom: 63px;
 
     text-align: center;
 
@@ -106,12 +109,18 @@
 
 .feature__title {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $color-black;
+
+  @media ($bp-tablet) {
+    margin-bottom: 20px;
+
+    font-size: 21px;
+  }
 }
 
 .feature__text {

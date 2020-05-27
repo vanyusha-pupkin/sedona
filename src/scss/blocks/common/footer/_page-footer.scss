@@ -1,6 +1,6 @@
 .page-footer {
-  padding-top: 40px;
-  padding-bottom: 23px;
+  padding-top: 35px;
+  padding-bottom: 20px;
 
   text-align: center;
 
@@ -16,12 +16,12 @@
     justify-content: space-between;
 
     margin: 0 auto;
-    padding: 0 calc(120 / 1200 * 100%);
+    padding: 0 calc(60 / 768 * 100%);
   }
 }
 
 .page-footer__hashtag {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 
   font-size: 21px;
   line-height: 26px;
@@ -35,7 +35,7 @@
 }
 
 .page-footer__social {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 
   @media ($bp-tablet) {
     margin-bottom: 0;

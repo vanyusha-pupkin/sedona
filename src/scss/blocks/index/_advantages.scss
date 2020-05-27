@@ -1,19 +1,27 @@
 .advantages {
-  padding-top: 47px;
+  padding-top: 40px;
 
   text-align: center;
   text-transform: uppercase;
+
+  @media ($bp-tablet) {
+    padding-top: 50px;
+  }
 }
 
 .advantages__promo {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding: 0 20px;
 
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   color: $color-black;
+
+  @media ($bp-tablet) {
+    font-size: 21px;
+  }
 }
 
 .advantages__intro {
@@ -21,12 +29,18 @@
 
   margin: 0;
   padding: 0 20px;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 
   font-size: 14px;
   line-height: 26px;
 
-  @include two-triangles ($color-white, $color-white, $color-white, 18px, 0, 0)
+  @include two-triangles ($color-white, $color-white, $color-white, 17px, 0, 0)
+
+  @media ($bp-tablet) {
+    padding-bottom: 0;
+
+    margin-bottom: 50px;
+  }
 }
 
 .advantages__list {
@@ -46,13 +60,18 @@
 .advantages__sublist {
   @include list-reset ();
 
+  display: flex;
+  flex-direction: column;
+
   padding: 0 20px;
+  padding-top: 7px;
+  padding-bottom: 38px;
 
   background-color: $bg-color-page;
 
   @media ($bp-tablet) {
-    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 
     padding: 0;
   }

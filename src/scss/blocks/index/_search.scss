@@ -1,10 +1,14 @@
 .search {
-  padding-top: 30px;
+  padding-top: 25px;
   padding-bottom: 50px;
 
   @media ($bp-tablet) {
     padding-top: 55px;
     padding-bottom: 58px;
+  }
+
+  @media ($bp-desktop) {
+    padding-bottom: 67px;
   }
 }
 
@@ -18,24 +22,35 @@
 
 .search__question {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 
   @media ($bp-tablet) {
+    margin-bottom: 30px;
+
     font-size: 30px;
   }
+
 }
 
 .search__text {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
+
+  @media ($bp-tablet) {
+    margin-bottom: 42px;
+  }
+
+  @media ($bp-desktop) {
+    margin-bottom: 48px;
+  }
 }
 
 .search__button {

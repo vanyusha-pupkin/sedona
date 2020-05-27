@@ -13,9 +13,12 @@
 .page-header__logo {
   order: 1;
 
-  display: block;
   height: 56px;
-  margin: 0 auto;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
 
   @media ($bp-tablet) {
     position: absolute;
