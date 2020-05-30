@@ -1,8 +1,9 @@
 .button {
   display: inline-block;
-
+  width: 100%;
   padding: 16px 10px;
 
+  font: inherit;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -10,6 +11,7 @@
   color: $color-white;
 
   background-color: $bg-color-blue;
+  border: 0;
 
   cursor: pointer;
   transition: all $timing-function;

@@ -12,6 +12,7 @@ $width-only-mobile: $width-tablet - 1px;
 //PADDING
 $padding-mobile: 20px;
 $padding-tablet: 60px;
+$padding-desktop: 120px;
 
 //BREAK POINT
 $bp-tablet: "min-width: #{$width-tablet}";            //break point for tablet version

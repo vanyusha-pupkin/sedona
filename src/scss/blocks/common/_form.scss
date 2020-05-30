@@ -1,16 +1,257 @@
 
 .form {}
 
-.form__fieldset {}
+.form__fieldset {
+  margin: 0;
+  padding: 0;
 
-.form__legend {}
+  border: 0;
+}
 
-.form__input-text {}
+.form__legend {
+  margin: 0 auto;
 
-.form__textarea {}
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-black;
 
-.form__radio {}
+  @media ($bp-tablet) {
+    position: relative;
 
-.form__checkbox {}
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
 
-.form__lebel {}
+    font-size: 21px;
+
+    span {
+      position: relative;
+
+      display: inline-block;
+      padding: 0 60px;
+
+      background-color: $color-white;
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background-color: #dbdbdb;
+
+      transform: translateY(-50%);
+    }
+
+  }
+}
+
+.form__lebel {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $color-black;
+
+  &--text {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #333;
+  }
+}
+
+.form__input-text {
+  width: 100%;
+  padding: 12px 20px;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $color-black;
+
+  background-color: $bg-color-gray;
+
+  border: 4px solid $bg-color-gray;
+
+  transition: all $timing-function;
+
+
+  &:hover {
+    background-color: $color-gray--hover;
+
+    border-color: $color-gray--hover;
+
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color:  $color-gray--hover;
+    outline: none;
+  }
+
+  &--phone,
+  &--email {
+    padding-right: 78px;
+  }
+}
+
+
+.form__wrapper-text {
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 58px;
+
+    background-color: #e6e6e6;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--email {
+    &::after {
+      background-image: sassvg("icon-mail", $color-black);
+    }
+  }
+
+  &--phone {
+    &::after {
+      background-image: sassvg("icon-phone", $color-black);
+    }
+  }
+}
+
+.form__textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 12px 15px;
+
+  font: inherit;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: $color-black;
+
+  background-color: $bg-color-gray;
+  border: 4px solid $bg-color-gray;
+
+  transition: all $timing-function;
+
+  resize: none;
+
+  &:hover {
+    background-color: $color-gray--hover;
+
+    border-color: $color-gray--hover;
+
+  }
+
+  &:focus {
+    background-color: transparent;
+    border-color:  $color-gray--hover;
+    outline: none;
+  }
+}
+
+.form__radio {
+  & + label::before,
+  & + label::after {
+    content: "";
+    top: 50%;
+
+    position: absolute;
+    left: 0;
+
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  & + label::before {
+    width: 55px;
+    height: 55px;
+
+    background-color: $color-gray;
+  }
+
+  & + label:hover::before {
+    background-color: $color-gray--hover;
+  }
+
+  & + label:active::before {
+    background-color: $color-gray--active;
+  }
+
+  &:checked + label::after {
+    left: 17px;
+
+    width: 22px;
+    height: 22px;
+
+    background-color: #333;
+  }
+
+  &:checked + label:active::after {
+    opacity: 0.3;
+  }
+}
+
+.form__checkbox {
+
+  & + label::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    width: 56px;
+    height: 56px;
+
+    background-color: $color-gray;
+    border-radius: 5px;
+  }
+
+  & + label:hover::before{
+    background-color: $color-gray--hover;
+  }
+
+  & + label:active::before{
+    background-color: $color-gray--active;
+  }
+
+
+  &:checked + label::after {
+    content: "";
+
+    position: absolute;
+    top: 15px;
+    left: 16px;
+
+    width: 25px;
+    height: 19px;
+
+    background-image: sassvg("icon-tick", $color-black);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  & + label:active::after{
+    opacity: 0.3;
+  }
+}
+
+
