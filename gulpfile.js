@@ -50,7 +50,8 @@ const path = {
     css:         'build/css/',
     js:          'build/js/',
     img:         'build/img/',
-    fonts:       'build/fonts/'
+    fonts:       'build/fonts/',
+    video:       'build/video/'
   },
   src:{
     html:        ['src/**/*.html', '!src/**/_*.html'],
@@ -62,7 +63,8 @@ const path = {
     svgSprite:   ['src/img/svg-sprite/*.svg', '!src/img/svg-sprite/sprite.svg'],
     svgToSass:   'src/img/svg-to-sass/*.svg',
     fonts:       'src/fonts/**/*.{woff,woff2}',
-    fontsForConvert: 'src/fonts/**/*.ttf'
+    fontsForConvert: 'src/fonts/**/*.ttf',
+    video:        'src/video/**/*.mp4'
   },
   watch:{
     html:        './src/**/*.html',
@@ -71,7 +73,8 @@ const path = {
     img:         ['src/img/**/*.{jpeg,jpg,png,gif,svg}', '!src/img/svg-sprite/*.svg'],
     svgSprite:   ['src/img/svg-sprite/*.svg', '!src/img/svg-sprite/sprite.svg'],
     svgToSass:   'src/img/svg-to-sass/*.svg',
-    fonts:       'src/fonts/**/*.{ttf,woff,woff2}'
+    fonts:       'src/fonts/**/*.{ttf,woff,woff2}',
+    video:        'src/video/**/*.mp4'
   },
   clean:         ['build/*'],
   deploy:        ['build/**/*.*'],
@@ -233,6 +236,15 @@ function fontsConvertToWoff2(){
       .pipe(browserSync.stream());
 };
 
+function video(){
+  return src(path.src.video)
+      .pipe(plumber())
+      .pipe(newer(path.build.video))
+      .pipe(dest(path.build.video))
+      .pipe(browserSync.stream());
+};
+
+
 function clean(){
   return del(path.clean);
 };
@@ -250,6 +262,7 @@ function watchFiles (){
   watch(path.watch.fonts, parallel(font, fontsConvertToWoff, fontsConvertToWoff2));
   watch(path.watch.svgSprite, svgsprite);
   watch(path.watch.svgToSass, svgscss);
+  watch(path.watch.video, video);
 }
 
 let build =  series(clean, svgsprite, svgscss,
@@ -262,7 +275,8 @@ let build =  series(clean, svgsprite, svgscss,
                 js,
                 font,
                 fontsConvertToWoff,
-                fontsConvertToWoff2
+                fontsConvertToWoff2,
+                video
 ));
 
 exports.build = build;

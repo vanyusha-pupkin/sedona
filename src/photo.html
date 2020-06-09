@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <!-------------------- head -------------------->
+
+@@include('html/_head.html', {
+  'title': 'City of Sedona - Фото'
+})
+
+  <body class="page">
+
+    <div class="page__container">
+
+    <!----------------- svg-sprite ----------------->
+    <div class="visually-hidden">
+      @@include('img/svg-sprite/sprite.svg')
+    </div>
+
+    <!------------------- header ------------------->
+
+@@include('html/_header.html', {
+  'active-index': '',
+  'active-photo': '',
+  'active-form': 'main-nav__item--active',
+
+  'link-index': 'href="index.html"',
+  'link-photo': '',
+  'link-form': 'href="form.html"',
+
+  'link-logo-index': 'href="index.html"'
+})
+
+
+
+    <!------------------- content ------------------>
+
+    <main class="page-main">
+
+      <section class="main-header main-header--inner">
+        <div class="main-header__image  main-header__image--inner">
+          <svg width="461" height="79">
+            <use xlink:href="#text-sedona"></use>
+          </svg>
+        </div>
+
+        <h1 class="main-header__title">Фото и видео</h1>
+        <p class="main-header__text">Не можете решиться на путешествие из-за курса? <br> Фотографии помогут вам&nbsp;забыть о политике и экономике.</p>
+      </section>
+
+      <section class="photo">
+        <h2 class="visually-hidden">Фото посетивших город Сидона</h2>
+
+        <div class="photo__wrapper">
+
+          <ul class="photo__list">
+
+            <li class="photo__item photo__item--main">
+              <article class="photo-card">
+                <a href="#" class="photo-card__link">
+                  @@include('html/_picture.html', {
+                    'name-file': 'photo-1', 'extension': 'jpg',
+                    'size-desktop': '1200px', 'size-tablet': '768px',
+                    'alt': 'Фото - просторы Аризоны'
+                  })
+                </a>
+                <div class="photo-card__description">
+                  <div class="photo-card__group">
+                    <h3 class="photo-card__title">неродные просторы</h3>
+                    <p class="photo-card__author">Автор фото: <span>Борис</span></p>
+                  </div>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like-it">
+                      <span class="visually-hidden">Поставить лайк</span>
+                    </button>
+                    <p class="photo-card__quantity-of-like">1350</p>
+                  </div> <!-- photo-card__likes -->
+                </div> <!-- photo-card__description -->
+              </article>
+            </li>
+
+            <li class="photo__item">
+              <article class="photo-card">
+                <a href="#" class="photo-card__link">
+                  @@include('html/_picture.html', {
+                    'name-file': 'photo-2', 'extension': 'jpg',
+                    'size-desktop': '1200px', 'size-tablet': '768px',
+                    'alt': 'Фото - местная растительность'
+                  })
+                </a>
+                <div class="photo-card__description">
+                  <div class="photo-card__group">
+                    <h3 class="photo-card__title">Местная растительность</h3>
+                    <p class="photo-card__author">Автор фото: <span>Сергей</span></p>
+                  </div>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like-it">
+                      <span class="visually-hidden">Поставить лайк</span>
+                    </button>
+                    <p class="photo-card__quantity-of-like">143</p>
+                  </div> <!-- photo-card__likes -->
+                </div> <!-- photo-card__description -->
+              </article>
+            </li>
+
+
+            <li class="photo__item">
+              <article class="photo-card">
+                <a href="#" class="photo-card__link">
+                  @@include('html/_picture.html', {
+                    'name-file': 'photo-3', 'extension': 'jpg',
+                    'size-desktop': '1200px', 'size-tablet': '768px',
+                    'alt': 'Фото - дорога на север'
+                  })
+                </a>
+                <div class="photo-card__description photo-card__description--dark-gray">
+                  <div class="photo-card__group">
+                    <h3 class="photo-card__title">Дорога на север</h3>
+                    <p class="photo-card__author">Автор фото: <span>Петр</span></p>
+                  </div>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like-it">
+                      <span class="visually-hidden">Поставить лайк</span>
+                    </button>
+                    <p class="photo-card__quantity-of-like">96</p>
+                  </div> <!-- photo-card__likes -->
+                </div> <!-- photo-card__description -->
+              </article>
+            </li>
+
+            <li class="photo__item">
+              <article class="photo-card">
+                <a href="#" class="photo-card__link">
+                  @@include('html/_picture.html', {
+                    'name-file': 'photo-4', 'extension': 'jpg',
+                    'size-desktop': '1200px', 'size-tablet': '768px',
+                    'alt': 'Фото - мост дьявола'
+                  })
+                </a>
+                <div class="photo-card__description">
+                  <div class="photo-card__group">
+                    <h3 class="photo-card__title">Мост дьявола</h3>
+                    <p class="photo-card__author">Автор фото: <span>Антон</span></p>
+                  </div>
+                  <div class="photo-card__likes">
+                    <button class="photo-card__like-it">
+                      <span class="visually-hidden">Поставить лайк</span>
+                    </button>
+                    <p class="photo-card__quantity-of-like">254</p>
+                  </div> <!-- photo-card__likes -->
+                </div> <!-- photo-card__description -->
+              </article>
+            </li>
+
+        </div> <!-- photo__wrapper -->
+
+      </section>
+
+      <section class="video">
+        <h2 class="visually-hidden">Видеопрезентация</h2>
+        <div class="video__wrapper">
+          <p class="video__title">Все еще сомневаетесь?</p>
+          <p class="video__test">Смотрите видеопрезентацию и скорее за билетами, пока <br> они не подорожали в очередной раз!</p>
+<!-- width="320" height="200" -->
+          <div class="video__video">
+            <video> <!--poster="img/photo/video-mobile@1x.jpg" controls  -->
+              <source src="video/presentation.mp4" type="video/mp4">
+             <!-- <source src="video/duel.ogv" type="video/ogg"> -->
+             <!-- <source src="video/duel.webm" type="video/webm"> -->
+               Элемент video не поддерживается вашим браузером.
+               <a href="video/presentation.mp4">Скачайте видео</a>.
+            </video>
+            <div class="video__controls  controls-video">
+              <span class="controls-video__replay"></span>
+              <div class="controls-video__scroll">
+                <div class="controls-video__bar"></div>
+                <span class="controls-video__toggle"></span>
+              </div>
+              <span class="controls-video__subtitles"></span>
+              <span class="controls-video__full-screen"></span>
+            </div>
+          </div> <!-- video__video -->
+
+        </div> <!-- video__wrapper -->
+      </section>
+
+    </main>
+
+
+    <!------------------- footer ------------------->
+@@include('html/_footer.html', {'': ''})
+
+    </div> <!-- page__container -->
+
+    <!---------------- modal-windows --------------->
+
+
+    <!------------- script-connection -------------->
+    <script src="js/main.min.js"></script>
+
+
+  </body>
+</html>

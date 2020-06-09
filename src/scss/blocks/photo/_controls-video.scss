@@ -1,0 +1,129 @@
+.controls-video {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  // min-height: 66px;
+  padding: 23px 23px;
+
+  background-color: $color-gray;
+
+  @media ($bp-tablet) {
+    padding: 35px 40px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.controls-video__replay,
+.controls-video__subtitles,
+.controls-video__full-screen {
+
+  opacity: 0.55;
+
+  transition: opacity  $timing-function;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media ($bp-tablet) {
+    opacity: 1;
+  }
+}
+
+.controls-video__replay {
+  display: block;
+  width: 16px;
+  height: 20px;
+  margin-right: 42px;
+  flex-grow: 1;
+
+  background-image: sassvg("icon-video-replay", #000);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media ($bp-tablet) {
+    flex-grow: 0;
+    background-image: sassvg("icon-video-replay", #fff);
+  }
+}
+
+.controls-video__scroll {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  left: 0;
+
+  // min-height: 45px;
+  padding: 21px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  @media ($bp-tablet) {
+    position: relative;
+
+    flex-grow: 1;
+
+    min-height: auto;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.controls-video__bar {
+  height: 3px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.controls-video__toggle {
+  position: absolute;
+  top: 50%;
+  left: 22px + 40px;
+
+  width: 9px;
+  height: 9px;
+
+  background-color: #fff;
+
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.controls-video__subtitles {
+  display: block;
+  width: 32px;
+  height: 20px;
+  margin-left: 42px;
+
+  background-image: sassvg("icon-video-subtitles", #000);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+
+
+  @media ($bp-tablet) {
+    background-image: sassvg("icon-video-subtitles", #fff);
+  }
+}
+
+.controls-video__full-screen {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-left: 31px;
+
+  background-image: sassvg("icon-video-fullscreen", #000);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  @media ($bp-tablet) {
+    background-image: sassvg("icon-video-fullscreen", #fff);
+  }
+}
